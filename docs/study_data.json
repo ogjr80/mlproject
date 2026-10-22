@@ -218,7 +218,7 @@
    "In the polynomial training cell, change `PolynomialFeatures(degree = 4)` to `degree = 2`, then rerun that cell, the two polynomial charts and the last prediction cell. Try `degree = 3` too. What to notice: degree 2 makes a gentler bend that misses some dots, and the 6.5 prediction moves away from the $158,862 shown now.",
    "Set `degree = 9` and rerun the training cell and the high-resolution chart (the one using `X_grid`). What to notice: with 10 points and degree 9 the curve can hit every dot, but look between the dots for bumps or dips. It looks \"perfect\" yet you would not trust it for in-between levels.",
    "In the last cell, change `[[6.5]]` to `[[11]]` (and in the linear prediction cell too). What to notice: both models happily return a number for a level that doesn't exist, and the polynomial one is far above the CEO's $1,000,000. Models extrapolate blindly.",
-   "In the high-resolution chart cell, change the step in `np.arange(min(X), max(X), 0.1)` to `1`. What to notice: the curve goes back to looking like straight segments joined at the levels, which shows why the small step matters."
+   "In the high-resolution chart cell, change the step in `np.arange(X.min(), X.max(), 0.1)` to `1`. What to notice: the curve goes back to looking like straight segments joined at the levels, which shows why the small step matters."
   ],
   "quiz": [
    {
@@ -307,7 +307,7 @@
    "staircase prediction"
   ],
   "mistakes": [
-   "**Plotting only the 10 real levels.** `plt.plot(X, regressor.predict(X))` joins the 10 predictions with slopes and makes the tree look like a smooth line. Use a fine grid like the notebook's `np.arange(min(X), max(X), 0.01)` to see the real staircase.",
+   "**Plotting only the 10 real levels.** `plt.plot(X, regressor.predict(X))` joins the 10 predictions with slopes and makes the tree look like a smooth line. Use a fine grid like the notebook's `np.arange(X.min(), X.max(), 0.01)` to see the real staircase.",
    "**Letting the tree grow without limits on real data.** With the defaults (`max_depth=None`, `min_samples_leaf=1`) the tree keeps splitting until every leaf holds one row, so it simply memorises the training data. On bigger datasets set `max_depth` or `min_samples_leaf` to stop it overfitting.",
    "**Expecting the tree to extrapolate.** A tree can only return salaries it has seen (leaf averages). Ask for level 15 and it returns the CEO's $1,000,000, not a higher number. Don't use it to predict beyond the range of your data.",
    "**Scaling the data \"just in case\".** Trees only compare values to cut-offs, so scaling changes nothing but adds steps and makes predictions harder to read. You can skip it here, unlike in SVR."
@@ -315,7 +315,7 @@
   "tryThis": [
    "In the training cell, change `DecisionTreeRegressor(random_state = 0)` to `DecisionTreeRegressor(max_depth = 2, random_state = 0)`, then rerun the training, prediction and chart cells. What to notice: the staircase has only a few wide steps, and the 6.5 prediction is now an average of several jobs instead of exactly $150,000.",
    "In the prediction cell, change `[[6.5]]` to `[[6.4]]`, then `[[6.6]]`, then `[[15]]`. What to notice: 6.4 still gives $150,000 but 6.6 jumps to level 7's $200,000, because the cut-off sits at 6.5. Level 15 just returns the CEO's salary; a tree can't go beyond what it has seen.",
-   "In the chart cell, change the step `0.01` in `np.arange(min(X), max(X), 0.01)` to `1`. What to notice: with only whole levels, the blue line joins the dots with slopes and the staircase disappears, which is why the notebook uses tiny steps.",
+   "In the chart cell, change the step `0.01` in `np.arange(X.min(), X.max(), 0.01)` to `1`. What to notice: with only whole levels, the blue line joins the dots with slopes and the staircase disappears, which is why the notebook uses tiny steps.",
    "Try `DecisionTreeRegressor(min_samples_leaf = 3, random_state = 0)` and rerun. What to notice: each leaf must hold at least 3 jobs, so the steps get wider and the model stops copying each salary exactly."
   ],
   "quiz": [
@@ -455,7 +455,7 @@
    "**Skipping feature scaling.** K-NN picks neighbours by distance, so without scaling a salary gap of 1,000 counts far more than an age gap of 30 years, and age is effectively ignored. For K-NN, scaling isn't optional: always scale before fitting.",
    "**Forgetting to scale a new person before predicting.** Writing `classifier.predict([[30,87000]])` feeds raw age and salary to a model that only ever saw scaled numbers (roughly -2 to +2), so the answer is meaningless. Always wrap new data in `sc.transform(...)`, exactly as the notebook does.",
    "**Picking K = 1 because it scores perfectly on the training set.** With K = 1 every training person is their own nearest neighbour, so training accuracy looks perfect, but the boundary follows every odd person and does worse on new people. Judge K on the test set, and prefer an odd number to avoid tied votes.",
-   "**Expecting K-NN to be fast at prediction time.** `.fit()` is instant because it only stores the data, but every prediction searches all stored people for the closest ones. On big datasets (or the fine grid in the charts) this gets slow, which is why this notebook uses `step = 1` for the plots."
+   "**Expecting K-NN to be fast at prediction time.** `.fit()` is instant because it only stores the data, but every prediction searches all stored people for the closest ones. On big datasets (or the fine grid in the charts) this gets slow, which is why this notebook uses a coarser grid (`step = 1` for age) in the plots."
   ],
   "tryThis": [
    "In the training cell, change `n_neighbors = 5` to `n_neighbors = 1`, then re-run the cells down to the training-set chart. What to notice: the red/green border becomes jagged, with small islands around individual people. The confusion matrix will usually get worse, because the model is now copying single odd cases.",
@@ -1131,21 +1131,21 @@
    "overfitting"
   ],
   "mistakes": [
-   "**Forgetting to scale the new photo.** The training photos were scaled with `rescale = 1./255`, so the single photo must be divided by 255 too (`test_image / 255.0`). If you skip it, the network sees pixel values up to 255 instead of up to 1, and its answer is unreliable.",
-   "**Mixing up which number means cat and which means dog.** Keras numbers the classes from the folder names in alphabetical order, so `{'cats': 0, 'dogs': 1}`. Print `training_set.class_indices` to check before reading the result, especially if you rename the folders.",
-   "**Augmenting the test set.** Shearing, zooming and flipping belong only in `train_datagen`. The test set should only be rescaled, so it measures the network on photos as they really are.",
-   "**Changing the image size in only one place.** `target_size = (64, 64)` appears in both generators and in `image.load_img`, and `input_shape=[64, 64, 3]` is in the first Conv2D layer. If they don't all match, you get a shape error."
+   "**Scaling the new photo twice.** The network already contains a `Rescaling(1./255)` layer, so the single photo must go in with its raw 0–255 pixels. If you also divide by 255 yourself, the network sees values close to 0 and its answer is unreliable.",
+   "**Mixing up which number means cat and which means dog.** Keras numbers the classes from the folder names in alphabetical order, so `['cats', 'dogs']` means cats = 0 and dogs = 1. Print `class_names` to check before reading the result, especially if you rename the folders.",
+   "**Putting augmentation outside the network and applying it to the test set.** Random shear, zoom and flip are a training trick. Keeping them as layers inside the model is safe, because Keras switches them off automatically when evaluating and predicting.",
+   "**Changing the image size in only one place.** `image_size = (64, 64)` appears in both dataset cells, `target_size = (64, 64)` in `load_img`, and `shape = (64, 64, 3)` in the `Input` line. If they don't all match, you get a shape error."
   ],
   "tryThis": [
    "You need the `dataset/` folder of cat and dog photos (see the first explanation cell) for all of these. In the training cell, change `epochs = 25` to `epochs = 5` (rebuild from `cnn = tf.keras.models.Sequential()` first). What to notice: compare `accuracy` and `val_accuracy` on the last line with a 25-epoch run. Fewer passes should leave both lower.",
-   "In the training-set preprocessing cell, turn augmentation off by changing it to `train_datagen = ImageDataGenerator(rescale = 1./255)`, then rebuild the CNN and retrain. What to notice: training `accuracy` will likely climb higher, but watch whether `val_accuracy` falls further behind it. That growing gap is overfitting.",
+   "Turn augmentation off: in the cell that starts `cnn = tf.keras.models.Sequential()`, delete the `RandomShear`, `RandomZoom` and `RandomFlip` lines, then run the build cells and retrain. What to notice: training `accuracy` will likely climb higher, but watch whether `val_accuracy` falls further behind it. That growing gap is overfitting.",
    "Add a third convolution and pooling round: after the second-layer cell, add a cell with `cnn.add(tf.keras.layers.Conv2D(filters=32, kernel_size=3, activation='relu'))` and `cnn.add(tf.keras.layers.MaxPool2D(pool_size=2, strides=2))`, then run the remaining build cells and retrain. What to notice: whether `val_accuracy` changes. The feature maps shrink to 6 × 6, so Flatten now gives far fewer numbers than 6,272.",
    "In the single-prediction cell, add `print(result[0][0])` after `result = cnn.predict(test_image)`, and try a few of your own photos by changing the file path. What to notice: values near 0 or 1 mean the network is confident; values near 0.5 mean it is unsure."
   ],
   "quiz": [
    {
-    "q": "Why is the test set only rescaled, with no shear, zoom or flip?",
-    "a": "Augmentation is a training trick to stop the network memorising exact photos. The test set stands in for real, new photos, so we want to judge the network on them as they are, not on altered copies."
+    "q": "The random shear, zoom and flip are layers inside the network. Why don't they spoil the test-set score or the single prediction?",
+    "a": "Keras only switches those random layers on while the network is learning. When it is evaluated on the test set or asked to predict, they pass the photo through unchanged, so the network is judged on photos as they really are."
    },
    {
     "q": "What does max pooling do to a 62 × 62 feature map here, and why is that useful?",
@@ -1153,7 +1153,7 @@
    },
    {
     "q": "If `result[0][0]` is 0.92, what does the notebook print, and why?",
-    "a": "It prints `dog`. 0.92 is above 0.5, and the folders were numbered alphabetically (`cats` = 0, `dogs` = 1), so values near 1 mean dog."
+    "a": "It prints `dog`. 0.92 is above 0.5, and the folders are numbered alphabetically (`['cats', 'dogs']`, so cats = 0 and dogs = 1), so values near 1 mean dog."
    },
    {
     "q": "What would happen if training `accuracy` reached 98% but `val_accuracy` stayed around 75%?",
