@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<title>Inside the cat-or-dog CNN</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#555555"/></marker></defs>
+<rect x="1" y="1" width="798" height="518" rx="12" fill="#FFFFFF" stroke="#D0D4DA" stroke-width="1.5"/>
+<text x="24" y="38" font-size="21" text-anchor="start" fill="#222222" font-weight="bold">Inside the cat-or-dog CNN</text>
+<text x="24" y="62" font-size="14" text-anchor="start" fill="#555555">Shapes are the sizes printed in the notebook: the picture shrinks while the features grow</text>
+<rect x="16" y="74" width="768" height="194" rx="10" fill="#F3F7FC" stroke="none" stroke-width="1.5"/>
+<rect x="16" y="290" width="330" height="214" rx="10" fill="#F3F7FC" stroke="none" stroke-width="1.5"/>
+<rect x="352" y="290" width="432" height="214" rx="10" fill="#F2F8F4" stroke="none" stroke-width="1.5"/>
+<text x="26" y="94" font-size="14" text-anchor="start" fill="#2E6FBA" font-weight="bold">Finding features (edges → ears, eyes, fur)</text>
+<text x="362" y="310" font-size="14" text-anchor="start" fill="#3A9A5B" font-weight="bold">Making the decision</text>
+<rect x="34" y="123" width="84" height="84" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.8"/>
+<rect x="41" y="116" width="84" height="84" rx="2" fill="#FFFFFF" stroke="#3A9A5B" stroke-width="1.8"/>
+<rect x="48" y="109" width="84" height="84" rx="2" fill="#FFFFFF" stroke="#C8453A" stroke-width="1.8"/>
+<text x="83" y="229" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">Photo</text>
+<text x="83" y="247" font-size="13" text-anchor="middle" fill="#555555">64×64×3 (RGB)</text>
+<line x1="140" y1="165" x2="222" y2="165" stroke="#555555" stroke-width="2" marker-end="url(#arr)"/>
+<text x="181" y="143" font-size="13" text-anchor="middle" fill="#222222" font-weight="bold">convolution</text>
+<text x="181" y="158" font-size="13" text-anchor="middle" fill="#555555">32 filters 3×3</text>
+<rect x="255" y="106" width="76" height="76" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<rect x="250" y="111" width="76" height="76" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<rect x="245" y="116" width="76" height="76" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<rect x="240" y="121" width="76" height="76" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<rect x="235" y="126" width="76" height="76" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<rect x="230" y="131" width="76" height="76" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<text x="280.5" y="229" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">32 feature maps</text>
+<text x="280.5" y="247" font-size="13" text-anchor="middle" fill="#555555">62×62 each</text>
+<line x1="345" y1="165" x2="415" y2="165" stroke="#555555" stroke-width="2" marker-end="url(#arr)"/>
+<text x="380" y="143" font-size="13" text-anchor="middle" fill="#222222" font-weight="bold">pooling</text>
+<text x="380" y="158" font-size="13" text-anchor="middle" fill="#555555">2×2</text>
+<rect x="447" y="122" width="48" height="48" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<rect x="442" y="127" width="48" height="48" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<rect x="437" y="132" width="48" height="48" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<rect x="432" y="137" width="48" height="48" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<rect x="427" y="142" width="48" height="48" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<rect x="422" y="147" width="48" height="48" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<text x="458.5" y="217" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">31×31×32</text>
+<text x="458.5" y="235" font-size="13" text-anchor="middle" fill="#555555">half the size</text>
+<line x1="505" y1="165" x2="585" y2="165" stroke="#555555" stroke-width="2" marker-end="url(#arr)"/>
+<text x="545" y="143" font-size="13" text-anchor="middle" fill="#222222" font-weight="bold">convolution</text>
+<text x="545" y="158" font-size="13" text-anchor="middle" fill="#555555">32 filters 3×3</text>
+<rect x="617" y="124" width="44" height="44" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<rect x="612" y="129" width="44" height="44" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<rect x="607" y="134" width="44" height="44" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<rect x="602" y="139" width="44" height="44" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<rect x="597" y="144" width="44" height="44" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<rect x="592" y="149" width="44" height="44" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<text x="626.5" y="215" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">29×29×32</text>
+<text x="626.5" y="233" font-size="13" text-anchor="middle" fill="#555555">bigger shapes</text>
+<path d="M740,165 H760 V280 H36 V388 H44" fill="none" stroke="#555555" stroke-width="2"/>
+<line x1="44" y1="388" x2="112" y2="388" stroke="#555555" stroke-width="2" marker-end="url(#arr)"/>
+<text x="78" y="366" font-size="13" text-anchor="middle" fill="#222222" font-weight="bold">pooling</text>
+<text x="78" y="381" font-size="13" text-anchor="middle" fill="#555555">2×2</text>
+<rect x="145" y="349" width="30" height="30" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<rect x="140" y="354" width="30" height="30" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<rect x="135" y="359" width="30" height="30" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<rect x="130" y="364" width="30" height="30" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<rect x="125" y="369" width="30" height="30" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<rect x="120" y="374" width="30" height="30" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.4"/>
+<text x="147.5" y="426" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">14×14×32</text>
+<text x="147.5" y="444" font-size="13" text-anchor="middle" fill="#555555">small maps</text>
+<line x1="185" y1="388" x2="262" y2="388" stroke="#555555" stroke-width="2" marker-end="url(#arr)"/>
+<text x="223.5" y="378" font-size="13" text-anchor="middle" fill="#222222" font-weight="bold">flatten</text>
+<rect x="272" y="318" width="22" height="140" rx="2" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.5"/>
+<line x1="272" y1="328" x2="294" y2="328" stroke="#B8CBE4" stroke-width="1"/>
+<line x1="272" y1="338" x2="294" y2="338" stroke="#B8CBE4" stroke-width="1"/>
+<line x1="272" y1="348" x2="294" y2="348" stroke="#B8CBE4" stroke-width="1"/>
+<line x1="272" y1="358" x2="294" y2="358" stroke="#B8CBE4" stroke-width="1"/>
+<line x1="272" y1="368" x2="294" y2="368" stroke="#B8CBE4" stroke-width="1"/>
+<line x1="272" y1="378" x2="294" y2="378" stroke="#B8CBE4" stroke-width="1"/>
+<line x1="272" y1="388" x2="294" y2="388" stroke="#B8CBE4" stroke-width="1"/>
+<line x1="272" y1="398" x2="294" y2="398" stroke="#B8CBE4" stroke-width="1"/>
+<line x1="272" y1="408" x2="294" y2="408" stroke="#B8CBE4" stroke-width="1"/>
+<line x1="272" y1="418" x2="294" y2="418" stroke="#B8CBE4" stroke-width="1"/>
+<line x1="272" y1="428" x2="294" y2="428" stroke="#B8CBE4" stroke-width="1"/>
+<line x1="272" y1="438" x2="294" y2="438" stroke="#B8CBE4" stroke-width="1"/>
+<line x1="272" y1="448" x2="294" y2="448" stroke="#B8CBE4" stroke-width="1"/>
+<text x="283" y="480" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">6,272 numbers</text>
+<text x="283" y="497" font-size="13" text-anchor="middle" fill="#555555">in one line</text>
+<line x1="304" y1="388" x2="400" y2="388" stroke="#555555" stroke-width="2" marker-end="url(#arr)"/>
+<text x="352" y="366" font-size="13" text-anchor="middle" fill="#222222" font-weight="bold">full</text>
+<text x="352" y="381" font-size="13" text-anchor="middle" fill="#555555">connection</text>
+<circle cx="430" cy="332" r="7.5" fill="#EEF0F3" stroke="#6B7280" stroke-width="1.5"/>
+<circle cx="430" cy="350" r="7.5" fill="#EEF0F3" stroke="#6B7280" stroke-width="1.5"/>
+<circle cx="430" cy="368" r="7.5" fill="#EEF0F3" stroke="#6B7280" stroke-width="1.5"/>
+<circle cx="430" cy="412" r="7.5" fill="#EEF0F3" stroke="#6B7280" stroke-width="1.5"/>
+<circle cx="430" cy="430" r="7.5" fill="#EEF0F3" stroke="#6B7280" stroke-width="1.5"/>
+<circle cx="430" cy="448" r="7.5" fill="#EEF0F3" stroke="#6B7280" stroke-width="1.5"/>
+<text x="430" y="396" font-size="18" text-anchor="middle" fill="#8A8F98" font-weight="bold">⋮</text>
+<text x="430" y="480" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">128 neurons (relu)</text>
+<line x1="452" y1="388" x2="540" y2="388" stroke="#555555" stroke-width="2" marker-end="url(#arr)"/>
+<text x="496" y="378" font-size="13" text-anchor="middle" fill="#222222" font-weight="bold">output</text>
+<circle cx="565" cy="388" r="20" fill="#3A9A5B" stroke="#FFFFFF" stroke-width="2"/>
+<text x="565" y="436" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">1 neuron</text>
+<text x="565" y="454" font-size="13" text-anchor="middle" fill="#555555">sigmoid</text>
+<text x="600" y="378" font-size="15" text-anchor="start" fill="#222222" font-weight="bold">near 0 → cat</text>
+<text x="600" y="402" font-size="15" text-anchor="start" fill="#222222" font-weight="bold">near 1 → dog</text>
+</svg>

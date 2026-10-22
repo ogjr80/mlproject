@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ML Study Guide</title>
+<style>
+:root {
+  --bg: #f6f7f9; --panel: #ffffff; --ink: #1d2128; --muted: #5d6573; --line: #e2e5ea;
+  --accent: #2e6fba; --accent-soft: #e6effa; --good: #2f8a50; --good-soft: #e5f4ea;
+  --warn: #b5602a; --warn-soft: #fbeee4; --code: #f0f2f5;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14171c; --panel: #1c2027; --ink: #e8eaee; --muted: #9aa3b2; --line: #2c323c;
+    --accent: #6ea8ec; --accent-soft: #1f2d40; --good: #5cc283; --good-soft: #1b3226;
+    --warn: #eb9a62; --warn-soft: #3a281c; --code: #262b34;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14171c; --panel: #1c2027; --ink: #e8eaee; --muted: #9aa3b2; --line: #2c323c;
+  --accent: #6ea8ec; --accent-soft: #1f2d40; --good: #5cc283; --good-soft: #1b3226;
+  --warn: #eb9a62; --warn-soft: #3a281c; --code: #262b34;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 16px/1.55 "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; }
+code { background: var(--code); padding: 1px 5px; border-radius: 4px; font-size: .9em;
+  font-family: ui-monospace, Consolas, "Cascadia Code", monospace; overflow-wrap: anywhere; }
+a { color: var(--accent); }
+button { font: inherit; cursor: pointer; }
+header { position: sticky; top: 0; z-index: 5; background: var(--panel); border-bottom: 1px solid var(--line);
+  padding: 12px 20px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+header h1 { font-size: 18px; margin: 0; white-space: nowrap; }
+.progress { flex: 1; min-width: 180px; display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 14px; }
+.bar { flex: 1; height: 8px; background: var(--line); border-radius: 99px; overflow: hidden; }
+.bar > i { display: block; height: 100%; background: var(--good); width: 0; transition: width .3s; }
+.theme { border: 1px solid var(--line); background: transparent; color: var(--ink); border-radius: 8px; padding: 4px 10px; }
+.layout { display: grid; grid-template-columns: 300px 1fr; max-width: 1200px; margin: 0 auto; }
+nav { border-right: 1px solid var(--line); padding: 16px 12px; height: calc(100vh - 57px); overflow-y: auto;
+  position: sticky; top: 57px; }
+nav input { width: 100%; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--panel); color: var(--ink); margin-bottom: 12px; }
+nav h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 14px 8px 4px; }
+nav button { display: flex; gap: 8px; align-items: center; width: 100%; text-align: left; border: 0;
+  background: transparent; color: var(--ink); padding: 6px 8px; border-radius: 6px; font-size: 14px; }
+nav button:hover { background: var(--accent-soft); }
+nav button.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+nav .tick { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--line); flex: none;
+  display: grid; place-items: center; font-size: 11px; color: #fff; }
+nav .done .tick { background: var(--good); border-color: var(--good); }
+.mobile-pick { display: none; }
+main { padding: 24px 32px 80px; min-width: 0; }
+.crumb { color: var(--muted); font-size: 14px; }
+main h2.title { font-size: 30px; margin: 4px 0 12px; line-height: 1.2; }
+.lead { font-size: 18px; margin: 0 0 18px; }
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 22px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.card h3 { margin: 0 0 6px; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.card p { margin: 0; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { background: var(--accent-soft); color: var(--accent); border-radius: 99px; padding: 2px 10px; font-size: 13px; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 4px 0 26px; }
+.btn { border: 1px solid var(--accent); background: var(--accent); color: #fff; border-radius: 8px;
+  padding: 8px 14px; text-decoration: none; font-weight: 600; font-size: 15px; }
+.btn.ghost { background: transparent; color: var(--accent); }
+.btn.good { background: var(--good); border-color: var(--good); }
+section.block { margin-bottom: 30px; }
+section.block > h3 { font-size: 20px; margin: 0 0 4px; }
+section.block > .hint { color: var(--muted); margin: 0 0 12px; font-size: 14px; }
+.q { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; }
+.q.right { border-color: var(--good); }
+.q.again { border-color: var(--warn); }
+.q .qtext { font-weight: 600; margin: 0 0 10px; }
+.q .answer { display: none; border-top: 1px dashed var(--line); padding-top: 10px; margin-top: 4px; }
+.q.open .answer { display: block; }
+.q .row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.q .row button { border: 1px solid var(--line); background: transparent; color: var(--ink); border-radius: 8px; padding: 4px 10px; font-size: 14px; }
+.q .row button.sel-right { background: var(--good-soft); border-color: var(--good); color: var(--good); }
+.q .row button.sel-again { background: var(--warn-soft); border-color: var(--warn); color: var(--warn); }
+ol.try { padding: 0; margin: 0; list-style: none; counter-reset: t; }
+ol.try li { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px 12px 14px;
+  margin-bottom: 10px; display: flex; gap: 12px; align-items: flex-start; }
+ol.try input { margin-top: 5px; width: 18px; height: 18px; accent-color: var(--good); flex: none; }
+ol.try li.checked { opacity: .65; }
+ul.mistakes { padding: 0; margin: 0; list-style: none; }
+ul.mistakes li { border-left: 4px solid var(--warn); background: var(--warn-soft); border-radius: 0 10px 10px 0;
+  padding: 10px 14px; margin-bottom: 10px; }
+.pager { display: flex; justify-content: space-between; gap: 10px; border-top: 1px solid var(--line); padding-top: 18px; }
+.pager button { border: 1px solid var(--line); background: var(--panel); color: var(--ink); border-radius: 8px; padding: 8px 14px; max-width: 48%; }
+@media (max-width: 820px) {
+  .layout { grid-template-columns: 1fr; }
+  nav { display: none; }
+  .mobile-pick { display: block; padding: 12px 16px 0; }
+  .mobile-pick select { width: 100%; padding: 8px; border-radius: 8px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); font: inherit; }
+  main { padding: 16px 16px 60px; }
+  main h2.title { font-size: 24px; }
+  .cards { grid-template-columns: 1fr; }
+  header { padding: 10px 16px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>🧭 ML Study Guide</h1>
+  <div class="progress"><div class="bar"><i id="bar"></i></div><span id="count"></span></div>
+  <button class="theme" id="theme" title="Switch light / dark">◐</button>
+</header>
+<div class="mobile-pick"><select id="pick" aria-label="Choose a notebook"></select></div>
+<div class="layout">
+  <nav><input id="search" type="search" placeholder="Search topics…" aria-label="Search topics"><div id="list"></div></nav>
+  <main id="main"></main>
+</div>
+<script>
+const DATA = /*__DATA__*/[];
+const KEY = 'ml-study-v1';
+let state = { current: DATA[0] && DATA[0].id, done: {}, quiz: {}, tried: {} };
+try { Object.assign(state, JSON.parse(localStorage.getItem(KEY) || '{}')); } catch (e) {}
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} };
+
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+function md(s) {
+  const parts = String(s).split(/(`[^`]+`)/g);
+  return parts.map(p => p.startsWith('`') && p.endsWith('`') && p.length > 1
+    ? '<code>' + esc(p.slice(1, -1)) + '</code>'
+    : esc(p).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+            .replace(/(^|[^*])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>')
+            .replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+            .replace(/\n/g, '<br>')).join('');
+}
+
+function renderNav() {
+  const q = document.getElementById('search').value.toLowerCase();
+  let html = '', part = '';
+  DATA.forEach(d => {
+    const hay = (d.title + ' ' + d.summary + ' ' + d.terms.join(' ')).toLowerCase();
+    if (q && !hay.includes(q)) return;
+    if (d.part !== part) { part = d.part; html += `<h2>${esc(d.partNo)} · ${esc(part)}</h2>`; }
+    html += `<button data-id="${d.id}" class="${d.id === state.current ? 'active' : ''} ${state.done[d.id] ? 'done' : ''}">
+      <span class="tick">${state.done[d.id] ? '✓' : ''}</span>${esc(d.title)}</button>`;
+  });
+  document.getElementById('list').innerHTML = html || '<p style="color:var(--muted);padding:0 8px">No matches.</p>';
+  document.getElementById('pick').innerHTML = DATA.map(d =>
+    `<option value="${d.id}" ${d.id === state.current ? 'selected' : ''}>${state.done[d.id] ? '✓ ' : ''}${esc(d.partNo)} · ${esc(d.title)}</option>`).join('');
+  const n = DATA.filter(d => state.done[d.id]).length;
+  document.getElementById('bar').style.width = (100 * n / DATA.length) + '%';
+  document.getElementById('count').textContent = `${n} of ${DATA.length} topics done`;
+}
+
+function renderMain() {
+  const i = DATA.findIndex(d => d.id === state.current), d = DATA[i];
+  if (!d) return;
+  const prev = DATA[i - 1], next = DATA[i + 1];
+  const quiz = d.quiz.map((q, k) => {
+    const key = d.id + ':' + k, v = state.quiz[key];
+    return `<div class="q ${v === 'right' ? 'right open' : v === 'again' ? 'again open' : ''}" data-k="${key}">
+      <p class="qtext">${k + 1}. ${md(q.q)}</p>
+      <button class="btn ghost reveal">${v ? 'Hide answer' : 'Show answer'}</button>
+      <div class="answer">${md(q.a)}
+        <div class="row"><span style="color:var(--muted);font-size:14px;align-self:center">Did you get it?</span>
+          <button data-v="right" class="${v === 'right' ? 'sel-right' : ''}">Yes 👍</button>
+          <button data-v="again" class="${v === 'again' ? 'sel-again' : ''}">Review again</button></div>
+      </div></div>`;
+  }).join('');
+  const tries = d.tryThis.map((t, k) => {
+    const key = d.id + ':' + k, on = !!state.tried[key];
+    return `<li class="${on ? 'checked' : ''}"><input type="checkbox" data-t="${key}" ${on ? 'checked' : ''} aria-label="Mark experiment ${k + 1} done"><div>${md(t)}</div></li>`;
+  }).join('');
+  document.getElementById('main').innerHTML = `
+    <div class="crumb">${esc(d.partNo)} · ${esc(d.part)} › ${esc(d.section)}</div>
+    <h2 class="title">${esc(d.title)}</h2>
+    <p class="lead">${md(d.summary)}</p>
+    <div class="cards">
+      <div class="card"><h3>When to use it</h3><p>${md(d.whenToUse)}</p></div>
+      <div class="card"><h3>Read first</h3><p>${md(d.readFirst)}</p></div>
+      <div class="card" style="grid-column:1/-1"><h3>New words</h3><div class="chips">${d.terms.map(t => `<span class="chip">${esc(t)}</span>`).join('')}</div></div>
+    </div>
+    <div class="actions">
+      <a class="btn" href="${d.url}" target="_blank" rel="noopener">Open the notebook ↗</a>
+      <button class="btn ${state.done[d.id] ? 'good' : 'ghost'}" id="done">${state.done[d.id] ? '✓ Done' : 'Mark as done'}</button>
+    </div>
+    <section class="block"><h3>Check your understanding</h3><p class="hint">Answer in your head first, then reveal and mark yourself honestly.</p>${quiz}</section>
+    <section class="block"><h3>Try this yourself</h3><p class="hint">Change one thing in the notebook, rerun it, and tick it off.</p><ol class="try">${tries}</ol></section>
+    <section class="block"><h3>Common mistakes to avoid</h3><ul class="mistakes">${d.mistakes.map(m => `<li>${md(m)}</li>`).join('')}</ul></section>
+    <div class="pager">
+      ${prev ? `<button data-go="${prev.id}">← ${esc(prev.title)}</button>` : '<span></span>'}
+      ${next ? `<button data-go="${next.id}">${esc(next.title)} →</button>` : '<span></span>'}
+    </div>`;
+}
+
+function go(id) { state.current = id; save(); renderNav(); renderMain(); window.scrollTo(0, 0); }
+function render() { renderNav(); renderMain(); }
+
+document.getElementById('list').addEventListener('click', e => { const b = e.target.closest('button[data-id]'); if (b) go(b.dataset.id); });
+document.getElementById('pick').addEventListener('change', e => go(e.target.value));
+document.getElementById('search').addEventListener('input', renderNav);
+document.getElementById('main').addEventListener('click', e => {
+  const t = e.target;
+  if (t.id === 'done') { state.done[state.current] = !state.done[state.current]; save(); render(); return; }
+  if (t.dataset.go) { go(t.dataset.go); return; }
+  const q = t.closest('.q');
+  if (q && t.classList.contains('reveal')) {
+    q.classList.toggle('open'); t.textContent = q.classList.contains('open') ? 'Hide answer' : 'Show answer'; return;
+  }
+  if (q && t.dataset.v) { state.quiz[q.dataset.k] = state.quiz[q.dataset.k] === t.dataset.v ? undefined : t.dataset.v; save(); renderMain(); }
+});
+document.getElementById('main').addEventListener('change', e => {
+  if (e.target.dataset.t) { state.tried[e.target.dataset.t] = e.target.checked; save(); e.target.closest('li').classList.toggle('checked', e.target.checked); }
+});
+document.getElementById('theme').addEventListener('click', () => {
+  const root = document.documentElement;
+  const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  root.dataset.theme = dark ? 'light' : 'dark';
+  try { localStorage.setItem(KEY + '-theme', root.dataset.theme); } catch (e) {}
+});
+try { const th = localStorage.getItem(KEY + '-theme'); if (th) document.documentElement.dataset.theme = th; } catch (e) {}
+document.addEventListener('keydown', e => {
+  if (e.target.matches('input, select, textarea')) return;
+  const i = DATA.findIndex(d => d.id === state.current);
+  if (e.key === 'ArrowRight' && DATA[i + 1]) go(DATA[i + 1].id);
+  if (e.key === 'ArrowLeft' && DATA[i - 1]) go(DATA[i - 1].id);
+});
+if (!DATA.some(d => d.id === state.current)) state.current = DATA[0] && DATA[0].id;
+render();
+</script>
+</body>
+</html>

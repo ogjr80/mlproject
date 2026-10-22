@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<title>The bank customer neural network</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#555555"/></marker></defs>
+<rect x="1" y="1" width="798" height="478" rx="12" fill="#FFFFFF" stroke="#D0D4DA" stroke-width="1.5"/>
+<text x="24" y="38" font-size="21" text-anchor="start" fill="#222222" font-weight="bold">The bank customer neural network</text>
+<line x1="190" y1="110" x2="360" y2="100" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="110" x2="360" y2="150" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="110" x2="360" y2="200" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="110" x2="360" y2="250" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="110" x2="360" y2="300" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="110" x2="360" y2="350" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="160" x2="360" y2="100" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="160" x2="360" y2="150" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="160" x2="360" y2="200" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="160" x2="360" y2="250" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="160" x2="360" y2="300" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="160" x2="360" y2="350" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="210" x2="360" y2="100" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="210" x2="360" y2="150" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="210" x2="360" y2="200" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="210" x2="360" y2="250" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="210" x2="360" y2="300" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="210" x2="360" y2="350" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="300" x2="360" y2="100" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="300" x2="360" y2="150" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="300" x2="360" y2="200" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="300" x2="360" y2="250" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="300" x2="360" y2="300" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="300" x2="360" y2="350" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="350" x2="360" y2="100" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="350" x2="360" y2="150" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="350" x2="360" y2="200" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="350" x2="360" y2="250" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="350" x2="360" y2="300" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="190" y1="350" x2="360" y2="350" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="100" x2="510" y2="100" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="100" x2="510" y2="150" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="100" x2="510" y2="200" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="100" x2="510" y2="250" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="100" x2="510" y2="300" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="100" x2="510" y2="350" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="150" x2="510" y2="100" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="150" x2="510" y2="150" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="150" x2="510" y2="200" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="150" x2="510" y2="250" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="150" x2="510" y2="300" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="150" x2="510" y2="350" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="200" x2="510" y2="100" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="200" x2="510" y2="150" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="200" x2="510" y2="200" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="200" x2="510" y2="250" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="200" x2="510" y2="300" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="200" x2="510" y2="350" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="250" x2="510" y2="100" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="250" x2="510" y2="150" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="250" x2="510" y2="200" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="250" x2="510" y2="250" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="250" x2="510" y2="300" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="250" x2="510" y2="350" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="300" x2="510" y2="100" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="300" x2="510" y2="150" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="300" x2="510" y2="200" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="300" x2="510" y2="250" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="300" x2="510" y2="300" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="300" x2="510" y2="350" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="350" x2="510" y2="100" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="350" x2="510" y2="150" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="350" x2="510" y2="200" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="350" x2="510" y2="250" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="350" x2="510" y2="300" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="360" y1="350" x2="510" y2="350" stroke="#C5CAD1" stroke-width="1"/>
+<line x1="510" y1="100" x2="650" y2="225" stroke="#C5CAD1" stroke-width="1.2"/>
+<line x1="510" y1="150" x2="650" y2="225" stroke="#C5CAD1" stroke-width="1.2"/>
+<line x1="510" y1="200" x2="650" y2="225" stroke="#C5CAD1" stroke-width="1.2"/>
+<line x1="510" y1="250" x2="650" y2="225" stroke="#C5CAD1" stroke-width="1.2"/>
+<line x1="510" y1="300" x2="650" y2="225" stroke="#C5CAD1" stroke-width="1.2"/>
+<line x1="510" y1="350" x2="650" y2="225" stroke="#C5CAD1" stroke-width="1.2"/>
+<circle cx="190" cy="110" r="15" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="2"/>
+<text x="166" y="115" font-size="14" text-anchor="end" fill="#222222">Credit score</text>
+<circle cx="190" cy="160" r="15" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="2"/>
+<text x="166" y="165" font-size="14" text-anchor="end" fill="#222222">Age</text>
+<circle cx="190" cy="210" r="15" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="2"/>
+<text x="166" y="215" font-size="14" text-anchor="end" fill="#222222">Balance</text>
+<circle cx="190" cy="300" r="15" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="2"/>
+<text x="166" y="305" font-size="14" text-anchor="end" fill="#222222">Active member</text>
+<circle cx="190" cy="350" r="15" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="2"/>
+<text x="166" y="355" font-size="14" text-anchor="end" fill="#222222">Salary</text>
+<text x="190" y="262" font-size="22" text-anchor="middle" fill="#8A8F98" font-weight="bold">⋮</text>
+<text x="166" y="262" font-size="14" text-anchor="end" fill="#555555">+ 7 more</text>
+<circle cx="360" cy="100" r="15" fill="#EEF0F3" stroke="#6B7280" stroke-width="2"/>
+<circle cx="360" cy="150" r="15" fill="#EEF0F3" stroke="#6B7280" stroke-width="2"/>
+<circle cx="360" cy="200" r="15" fill="#EEF0F3" stroke="#6B7280" stroke-width="2"/>
+<circle cx="360" cy="250" r="15" fill="#EEF0F3" stroke="#6B7280" stroke-width="2"/>
+<circle cx="360" cy="300" r="15" fill="#EEF0F3" stroke="#6B7280" stroke-width="2"/>
+<circle cx="360" cy="350" r="15" fill="#EEF0F3" stroke="#6B7280" stroke-width="2"/>
+<circle cx="510" cy="100" r="15" fill="#EEF0F3" stroke="#6B7280" stroke-width="2"/>
+<circle cx="510" cy="150" r="15" fill="#EEF0F3" stroke="#6B7280" stroke-width="2"/>
+<circle cx="510" cy="200" r="15" fill="#EEF0F3" stroke="#6B7280" stroke-width="2"/>
+<circle cx="510" cy="250" r="15" fill="#EEF0F3" stroke="#6B7280" stroke-width="2"/>
+<circle cx="510" cy="300" r="15" fill="#EEF0F3" stroke="#6B7280" stroke-width="2"/>
+<circle cx="510" cy="350" r="15" fill="#EEF0F3" stroke="#6B7280" stroke-width="2"/>
+<circle cx="650" cy="225" r="20" fill="#3A9A5B" stroke="#FFFFFF" stroke-width="2"/>
+<text x="680" y="219" font-size="14" text-anchor="start" fill="#222222">chance the</text>
+<text x="680" y="237" font-size="14" text-anchor="start" fill="#222222">customer leaves</text>
+<text x="680" y="257" font-size="14" text-anchor="start" fill="#3A9A5B" font-weight="bold">e.g. 0.8 = 80%</text>
+<text x="190" y="412" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">Input: 12 numbers</text>
+<text x="190" y="431" font-size="14" text-anchor="middle" fill="#555555">one per column of X</text>
+<text x="360" y="412" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">Hidden layer 1</text>
+<text x="360" y="431" font-size="14" text-anchor="middle" fill="#555555">6 neurons, relu</text>
+<text x="510" y="412" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">Hidden layer 2</text>
+<text x="510" y="431" font-size="14" text-anchor="middle" fill="#555555">6 neurons, relu</text>
+<text x="650" y="412" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">Output</text>
+<text x="650" y="431" font-size="14" text-anchor="middle" fill="#555555">1 neuron, sigmoid</text>
+<line x1="190" y1="76" x2="650" y2="76" stroke="#555555" stroke-width="2" marker-end="url(#arr)"/>
+<text x="420" y="70" font-size="13" text-anchor="middle" fill="#555555">information flows left to right</text>
+<text x="24" y="466" font-size="14" text-anchor="start" fill="#555555">Every line carries a number times a weight. Training nudges all the weights to make guesses less wrong.</text>
+</svg>

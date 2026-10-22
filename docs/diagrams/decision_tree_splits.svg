@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<title>A decision tree cuts the chart into boxes</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#555555"/></marker></defs>
+<rect x="1" y="1" width="798" height="448" rx="12" fill="#FFFFFF" stroke="#D0D4DA" stroke-width="1.5"/>
+<text x="24" y="38" font-size="21" text-anchor="start" fill="#222222" font-weight="bold">A decision tree cuts the chart into boxes</text>
+<text x="24" y="62" font-size="14" text-anchor="start" fill="#555555">Red = won't buy (0), green = buys (1). The questions here are made-up examples.</text>
+<line x1="200" y1="119" x2="105" y2="181" stroke="#8A8F98" stroke-width="1.8"/>
+<text x="136.5" y="154" font-size="14" text-anchor="middle" fill="#555555" font-weight="bold">no</text>
+<line x1="200" y1="119" x2="295" y2="181" stroke="#8A8F98" stroke-width="1.8"/>
+<text x="263.5" y="154" font-size="14" text-anchor="middle" fill="#555555" font-weight="bold">yes</text>
+<line x1="105" y1="219" x2="55" y2="286" stroke="#8A8F98" stroke-width="1.8"/>
+<text x="66" y="257" font-size="14" text-anchor="middle" fill="#555555" font-weight="bold">no</text>
+<line x1="105" y1="219" x2="155" y2="286" stroke="#8A8F98" stroke-width="1.8"/>
+<text x="144" y="257" font-size="14" text-anchor="middle" fill="#555555" font-weight="bold">yes</text>
+<line x1="295" y1="219" x2="245" y2="286" stroke="#8A8F98" stroke-width="1.8"/>
+<text x="256" y="257" font-size="14" text-anchor="middle" fill="#555555" font-weight="bold">no</text>
+<line x1="295" y1="219" x2="345" y2="286" stroke="#8A8F98" stroke-width="1.8"/>
+<text x="334" y="257" font-size="14" text-anchor="middle" fill="#555555" font-weight="bold">yes</text>
+<rect x="122" y="81" width="156" height="38" rx="8" fill="#EEF0F3" stroke="#8A8F98" stroke-width="1.5"/>
+<text x="200" y="105" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">Age over 42?</text>
+<rect x="27" y="181" width="156" height="38" rx="8" fill="#EEF0F3" stroke="#8A8F98" stroke-width="1.5"/>
+<text x="105" y="205" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">Salary over 90k?</text>
+<rect x="217" y="181" width="156" height="38" rx="8" fill="#EEF0F3" stroke="#8A8F98" stroke-width="1.5"/>
+<text x="295" y="205" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">Salary over 40k?</text>
+<rect x="13" y="286" width="84" height="48" rx="8" fill="#F6DEDB" stroke="#C8453A" stroke-width="2"/>
+<text x="55" y="306" font-size="14" text-anchor="middle" fill="#C8453A" font-weight="bold">A</text>
+<text x="55" y="325" font-size="14" text-anchor="middle" fill="#C8453A">won't buy</text>
+<rect x="113" y="286" width="84" height="48" rx="8" fill="#DDF0E3" stroke="#3A9A5B" stroke-width="2"/>
+<text x="155" y="306" font-size="14" text-anchor="middle" fill="#3A9A5B" font-weight="bold">B</text>
+<text x="155" y="325" font-size="14" text-anchor="middle" fill="#3A9A5B">buys</text>
+<rect x="203" y="286" width="84" height="48" rx="8" fill="#F6DEDB" stroke="#C8453A" stroke-width="2"/>
+<text x="245" y="306" font-size="14" text-anchor="middle" fill="#C8453A" font-weight="bold">C</text>
+<text x="245" y="325" font-size="14" text-anchor="middle" fill="#C8453A">won't buy</text>
+<rect x="303" y="286" width="84" height="48" rx="8" fill="#DDF0E3" stroke="#3A9A5B" stroke-width="2"/>
+<text x="345" y="306" font-size="14" text-anchor="middle" fill="#3A9A5B" font-weight="bold">D</text>
+<text x="345" y="325" font-size="14" text-anchor="middle" fill="#3A9A5B">buys</text>
+<text x="200" y="372" font-size="14" text-anchor="middle" fill="#555555">The tree: yes/no questions</text>
+<rect x="450" y="215.6" width="182.9" height="164.4" rx="0" fill="#F6DEDB" stroke="none" stroke-width="1.5"/>
+<text x="622.9" y="239.6" font-size="20" text-anchor="end" fill="#8A8F98" font-weight="bold">A</text>
+<rect x="450" y="84" width="182.9" height="131.6" rx="0" fill="#DDF0E3" stroke="none" stroke-width="1.5"/>
+<text x="622.9" y="108" font-size="20" text-anchor="end" fill="#8A8F98" font-weight="bold">B</text>
+<rect x="632.9" y="325.2" width="137.1" height="54.8" rx="0" fill="#F6DEDB" stroke="none" stroke-width="1.5"/>
+<text x="760" y="349.2" font-size="20" text-anchor="end" fill="#8A8F98" font-weight="bold">C</text>
+<rect x="632.9" y="84" width="137.1" height="241.2" rx="0" fill="#DDF0E3" stroke="none" stroke-width="1.5"/>
+<text x="760" y="108" font-size="20" text-anchor="end" fill="#8A8F98" font-weight="bold">D</text>
+<circle cx="501.2" cy="353" r="5.5" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="525.6" cy="346.1" r="5.5" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="475.4" cy="313.1" r="5.5" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="605.1" cy="259.8" r="5.5" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="581.8" cy="337.2" r="5.5" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="547" cy="329.8" r="5.5" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="491.5" cy="352.6" r="5.5" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="497.9" cy="242.8" r="5.5" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="591.5" cy="259" r="5.5" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="587.2" cy="179.4" r="5.5" fill="#3A9A5B" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="512.5" cy="137.5" r="5.5" fill="#3A9A5B" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="576.8" cy="115.6" r="5.5" fill="#3A9A5B" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="599.3" cy="189.6" r="5.5" fill="#3A9A5B" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="680.4" cy="347.7" r="5.5" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="675.1" cy="361.8" r="5.5" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="698.6" cy="291.2" r="5.5" fill="#3A9A5B" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="747.8" cy="129.6" r="5.5" fill="#3A9A5B" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="706.5" cy="247.3" r="5.5" fill="#3A9A5B" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="745" cy="190.6" r="5.5" fill="#3A9A5B" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="742.2" cy="133.2" r="5.5" fill="#3A9A5B" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="702.3" cy="223.6" r="5.5" fill="#3A9A5B" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="712" cy="220.1" r="5.5" fill="#3A9A5B" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="665.3" cy="246.3" r="5.5" fill="#3A9A5B" stroke="#FFFFFF" stroke-width="1.2"/>
+<rect x="450" y="84" width="320" height="296" rx="0" fill="none" stroke="#222222" stroke-width="1.2"/>
+<line x1="632.9" y1="84" x2="632.9" y2="380" stroke="#222222" stroke-width="2.5"/>
+<line x1="450" y1="215.6" x2="632.9" y2="215.6" stroke="#222222" stroke-width="2.5"/>
+<line x1="632.9" y1="325.2" x2="770" y2="325.2" stroke="#222222" stroke-width="2.5"/>
+<text x="632.9" y="78" font-size="13" text-anchor="middle" fill="#222222" font-weight="bold">age 42</text>
+<text x="456" y="209.6" font-size="13" text-anchor="start" fill="#222222" font-weight="bold">salary 90k</text>
+<text x="764" y="319.2" font-size="13" text-anchor="end" fill="#222222" font-weight="bold">salary 40k</text>
+<text x="610" y="404" font-size="14" text-anchor="middle" fill="#222222">Age →</text>
+<text x="0" y="0" font-size="14" text-anchor="middle" fill="#222222" transform="translate(436,232.0) rotate(-90)">Salary →</text>
+<text x="24" y="430" font-size="14" text-anchor="start" fill="#555555">Each question is one straight cut across the chart. Each leaf (A to D) is one box.</text>
+</svg>

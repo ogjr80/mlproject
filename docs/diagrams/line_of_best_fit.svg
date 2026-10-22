@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="470" viewBox="0 0 760 470" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<title>The line of best fit</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#555555"/></marker></defs>
+<rect x="1" y="1" width="758" height="468" rx="12" fill="#FFFFFF" stroke="#D0D4DA" stroke-width="1.5"/>
+<text x="24" y="38" font-size="21" text-anchor="start" fill="#222222" font-weight="bold">The line of best fit</text>
+<text x="24" y="62" font-size="14" text-anchor="start" fill="#555555">Each dot is an employee. The line is the model's guess for every amount of experience.</text>
+<line x1="80" y1="400" x2="520" y2="400" stroke="#222222" stroke-width="1.5"/>
+<line x1="80" y1="400" x2="80" y2="90" stroke="#222222" stroke-width="1.5"/>
+<text x="300" y="434" font-size="14" text-anchor="middle" fill="#222222">Years of experience →</text>
+<text x="0" y="0" font-size="14" text-anchor="middle" fill="#222222" transform="translate(58,245.0) rotate(-90)">Salary →</text>
+<line x1="128" y1="317.8" x2="128" y2="351.6" stroke="#E07B39" stroke-width="2.2" stroke-dasharray="5 3"/>
+<line x1="160" y1="358.9" x2="160" y2="330.7" stroke="#E07B39" stroke-width="2.2" stroke-dasharray="5 3"/>
+<line x1="200" y1="281.9" x2="200" y2="304.5" stroke="#E07B39" stroke-width="2.2" stroke-dasharray="5 3"/>
+<line x1="236" y1="317.5" x2="236" y2="280.9" stroke="#E07B39" stroke-width="2.2" stroke-dasharray="5 3"/>
+<line x1="260" y1="245.4" x2="260" y2="265.1" stroke="#E07B39" stroke-width="2.2" stroke-dasharray="5 3"/>
+<line x1="292" y1="263.9" x2="292" y2="244.2" stroke="#E07B39" stroke-width="2.2" stroke-dasharray="5 3"/>
+<line x1="320" y1="189.2" x2="320" y2="225.8" stroke="#E07B39" stroke-width="2.2" stroke-dasharray="5 3"/>
+<line x1="364" y1="219.6" x2="364" y2="197" stroke="#E07B39" stroke-width="2.2" stroke-dasharray="5 3"/>
+<line x1="408" y1="140" x2="408" y2="168.2" stroke="#E07B39" stroke-width="2.2" stroke-dasharray="5 3"/>
+<line x1="460" y1="151" x2="460" y2="134.1" stroke="#E07B39" stroke-width="2.2" stroke-dasharray="5 3"/>
+<line x1="92" y1="375.2" x2="512" y2="100" stroke="#2E6FBA" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="128" cy="317.8" r="7" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="160" cy="358.9" r="7" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="200" cy="281.9" r="7" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="236" cy="317.5" r="7" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="260" cy="245.4" r="7" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="292" cy="263.9" r="7" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="320" cy="189.2" r="7" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="364" cy="219.6" r="7" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="408" cy="140" r="7" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<circle cx="460" cy="151" r="7" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<line x1="240" y1="299.2" x2="306" y2="359.2" stroke="#8A8F98" stroke-width="1.2"/>
+<text x="310" y="369.2" font-size="14" text-anchor="start" fill="#E07B39" font-weight="bold">error (gap)</text>
+<circle cx="568" cy="110" r="7" fill="#C8453A" stroke="#FFFFFF" stroke-width="1.2"/>
+<text x="586" y="115" font-size="14" text-anchor="start" fill="#222222">real employee</text>
+<line x1="560" y1="145" x2="578" y2="145" stroke="#2E6FBA" stroke-width="3.5"/>
+<text x="586" y="150" font-size="14" text-anchor="start" fill="#222222">the model's line</text>
+<line x1="569" y1="172" x2="569" y2="194" stroke="#E07B39" stroke-width="2.2" stroke-dasharray="5 3"/>
+<text x="586" y="188" font-size="14" text-anchor="start" fill="#222222">error: real minus line</text>
+<text x="560" y="240" font-size="14" text-anchor="start" fill="#222222" font-weight="bold">The line's rule:</text>
+<text x="560" y="262" font-size="14" text-anchor="start" fill="#222222">Salary = start</text>
+<text x="560" y="282" font-size="14" text-anchor="start" fill="#222222">+ raise × years</text>
+<text x="560" y="326" font-size="14" text-anchor="start" fill="#222222" font-weight="bold">Least squares:</text>
+<text x="560" y="348" font-size="14" text-anchor="start" fill="#222222">square every gap,</text>
+<text x="560" y="368" font-size="14" text-anchor="start" fill="#222222">add them up, and pick</text>
+<text x="560" y="388" font-size="14" text-anchor="start" fill="#222222">the line that makes</text>
+<text x="560" y="408" font-size="14" text-anchor="start" fill="#222222">this total smallest.</text>
+</svg>

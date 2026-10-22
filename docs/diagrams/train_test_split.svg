@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="455" viewBox="0 0 760 455" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<title>Train / test split</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#555555"/></marker></defs>
+<rect x="1" y="1" width="758" height="453" rx="12" fill="#FFFFFF" stroke="#D0D4DA" stroke-width="1.5"/>
+<text x="24" y="38" font-size="21" text-anchor="start" fill="#222222" font-weight="bold">Train / test split</text>
+<text x="24" y="62" font-size="14" text-anchor="start" fill="#555555">test_size = 0.2: the rows are split into a study part and an exam part</text>
+<rect x="30" y="84" width="366" height="30" rx="0" fill="#EEF0F3" stroke="#C9CDD3" stroke-width="1"/>
+<text x="85" y="104" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">Country</text>
+<text x="172" y="104" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">Age</text>
+<text x="250" y="104" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">Salary</text>
+<text x="346" y="104" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">Purchased</text>
+<rect x="30" y="114" width="366" height="29" rx="0" fill="#DCE8F6" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="85" y="133.5" font-size="14" text-anchor="middle" fill="#222222">France</text>
+<text x="172" y="133.5" font-size="14" text-anchor="middle" fill="#222222">44</text>
+<text x="250" y="133.5" font-size="14" text-anchor="middle" fill="#222222">72,000</text>
+<text x="346" y="133.5" font-size="14" text-anchor="middle" fill="#222222">No</text>
+<rect x="30" y="143" width="366" height="29" rx="0" fill="#DCE8F6" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="85" y="162.5" font-size="14" text-anchor="middle" fill="#222222">Spain</text>
+<text x="172" y="162.5" font-size="14" text-anchor="middle" fill="#222222">27</text>
+<text x="250" y="162.5" font-size="14" text-anchor="middle" fill="#222222">48,000</text>
+<text x="346" y="162.5" font-size="14" text-anchor="middle" fill="#222222">Yes</text>
+<rect x="30" y="172" width="366" height="29" rx="0" fill="#DCE8F6" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="85" y="191.5" font-size="14" text-anchor="middle" fill="#222222">Spain</text>
+<text x="172" y="191.5" font-size="14" text-anchor="middle" fill="#222222">38</text>
+<text x="250" y="191.5" font-size="14" text-anchor="middle" fill="#222222">61,000</text>
+<text x="346" y="191.5" font-size="14" text-anchor="middle" fill="#222222">No</text>
+<rect x="30" y="201" width="366" height="29" rx="0" fill="#DCE8F6" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="85" y="220.5" font-size="14" text-anchor="middle" fill="#222222">Germany</text>
+<text x="172" y="220.5" font-size="14" text-anchor="middle" fill="#222222">40</text>
+<text x="250" y="220.5" font-size="14" text-anchor="middle" fill="#222222">63,778</text>
+<text x="346" y="220.5" font-size="14" text-anchor="middle" fill="#222222">Yes</text>
+<rect x="30" y="230" width="366" height="29" rx="0" fill="#DCE8F6" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="85" y="249.5" font-size="14" text-anchor="middle" fill="#222222">France</text>
+<text x="172" y="249.5" font-size="14" text-anchor="middle" fill="#222222">35</text>
+<text x="250" y="249.5" font-size="14" text-anchor="middle" fill="#222222">58,000</text>
+<text x="346" y="249.5" font-size="14" text-anchor="middle" fill="#222222">Yes</text>
+<rect x="30" y="259" width="366" height="29" rx="0" fill="#DCE8F6" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="85" y="278.5" font-size="14" text-anchor="middle" fill="#222222">Spain</text>
+<text x="172" y="278.5" font-size="14" text-anchor="middle" fill="#222222">38.8</text>
+<text x="250" y="278.5" font-size="14" text-anchor="middle" fill="#222222">52,000</text>
+<text x="346" y="278.5" font-size="14" text-anchor="middle" fill="#222222">No</text>
+<rect x="30" y="288" width="366" height="29" rx="0" fill="#DCE8F6" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="85" y="307.5" font-size="14" text-anchor="middle" fill="#222222">France</text>
+<text x="172" y="307.5" font-size="14" text-anchor="middle" fill="#222222">48</text>
+<text x="250" y="307.5" font-size="14" text-anchor="middle" fill="#222222">79,000</text>
+<text x="346" y="307.5" font-size="14" text-anchor="middle" fill="#222222">Yes</text>
+<rect x="30" y="317" width="366" height="29" rx="0" fill="#DCE8F6" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="85" y="336.5" font-size="14" text-anchor="middle" fill="#222222">Germany</text>
+<text x="172" y="336.5" font-size="14" text-anchor="middle" fill="#222222">50</text>
+<text x="250" y="336.5" font-size="14" text-anchor="middle" fill="#222222">83,000</text>
+<text x="346" y="336.5" font-size="14" text-anchor="middle" fill="#222222">No</text>
+<rect x="30" y="346" width="366" height="29" rx="0" fill="#FBE5D6" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="85" y="365.5" font-size="14" text-anchor="middle" fill="#222222">Germany</text>
+<text x="172" y="365.5" font-size="14" text-anchor="middle" fill="#222222">30</text>
+<text x="250" y="365.5" font-size="14" text-anchor="middle" fill="#222222">54,000</text>
+<text x="346" y="365.5" font-size="14" text-anchor="middle" fill="#222222">No</text>
+<rect x="30" y="375" width="366" height="29" rx="0" fill="#FBE5D6" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="85" y="394.5" font-size="14" text-anchor="middle" fill="#222222">France</text>
+<text x="172" y="394.5" font-size="14" text-anchor="middle" fill="#222222">37</text>
+<text x="250" y="394.5" font-size="14" text-anchor="middle" fill="#222222">67,000</text>
+<text x="346" y="394.5" font-size="14" text-anchor="middle" fill="#222222">Yes</text>
+<path d="M410,116 h10 V223.5 l8,6 l-8,6 V343 h-10" fill="none" stroke="#2E6FBA" stroke-width="2.5"/>
+<path d="M410,349 h10 V369.5 l8,6 l-8,6 V402 h-10" fill="none" stroke="#E07B39" stroke-width="2.5"/>
+<text x="444" y="207.5" font-size="17" text-anchor="start" fill="#2E6FBA" font-weight="bold">Training set: 8 customers (80%)</text>
+<text x="444" y="231.5" font-size="14" text-anchor="start" fill="#222222">The model studies these rows</text>
+<text x="444" y="251.5" font-size="14" text-anchor="start" fill="#222222">and learns the pattern.</text>
+<text x="444" y="367.5" font-size="17" text-anchor="start" fill="#E07B39" font-weight="bold">Test set: 2 customers (20%)</text>
+<text x="444" y="389.5" font-size="14" text-anchor="start" fill="#222222">Kept hidden. Used at the end as the exam.</text>
+<text x="30" y="437" font-size="14" text-anchor="start" fill="#555555">Rows are shuffled first (random_state = 1), so the split is random but repeatable.</text>
+</svg>

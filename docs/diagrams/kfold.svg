@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="535" viewBox="0 0 800 535" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<title>k-fold cross validation: 10 mini exams</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#555555"/></marker></defs>
+<rect x="1" y="1" width="798" height="533" rx="12" fill="#FFFFFF" stroke="#D0D4DA" stroke-width="1.5"/>
+<text x="24" y="38" font-size="21" text-anchor="start" fill="#222222" font-weight="bold">k-fold cross validation: 10 mini exams</text>
+<text x="24" y="62" font-size="14" text-anchor="start" fill="#555555">cv = 10: the 300 training people are cut into 10 folds of 30. Each fold takes one turn as the exam.</text>
+<text x="143" y="90" font-size="13" text-anchor="middle" fill="#555555">1</text>
+<text x="193" y="90" font-size="13" text-anchor="middle" fill="#555555">2</text>
+<text x="243" y="90" font-size="13" text-anchor="middle" fill="#555555">3</text>
+<text x="293" y="90" font-size="13" text-anchor="middle" fill="#555555">4</text>
+<text x="343" y="90" font-size="13" text-anchor="middle" fill="#555555">5</text>
+<text x="393" y="90" font-size="13" text-anchor="middle" fill="#555555">6</text>
+<text x="443" y="90" font-size="13" text-anchor="middle" fill="#555555">7</text>
+<text x="493" y="90" font-size="13" text-anchor="middle" fill="#555555">8</text>
+<text x="543" y="90" font-size="13" text-anchor="middle" fill="#555555">9</text>
+<text x="593" y="90" font-size="13" text-anchor="middle" fill="#555555">10</text>
+<text x="108" y="90" font-size="13" text-anchor="end" fill="#555555">fold:</text>
+<text x="108" y="117" font-size="14" text-anchor="end" fill="#222222" font-weight="bold">Round 1</text>
+<rect x="120" y="98" width="46" height="28" rx="4" fill="#E07B39" stroke="#E07B39" stroke-width="1.2"/>
+<text x="143" y="117" font-size="13" text-anchor="middle" fill="#FFFFFF" font-weight="bold">exam</text>
+<rect x="170" y="98" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="220" y="98" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="270" y="98" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="320" y="98" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="370" y="98" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="420" y="98" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="470" y="98" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="520" y="98" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="570" y="98" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<line x1="624" y1="112" x2="654" y2="112" stroke="#8A8F98" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="662" y="117" font-size="14" text-anchor="start" fill="#222222">score 1</text>
+<text x="108" y="151" font-size="14" text-anchor="end" fill="#222222" font-weight="bold">Round 2</text>
+<rect x="120" y="132" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="170" y="132" width="46" height="28" rx="4" fill="#E07B39" stroke="#E07B39" stroke-width="1.2"/>
+<text x="193" y="151" font-size="13" text-anchor="middle" fill="#FFFFFF" font-weight="bold">exam</text>
+<rect x="220" y="132" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="270" y="132" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="320" y="132" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="370" y="132" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="420" y="132" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="470" y="132" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="520" y="132" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="570" y="132" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<line x1="624" y1="146" x2="654" y2="146" stroke="#8A8F98" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="662" y="151" font-size="14" text-anchor="start" fill="#222222">score 2</text>
+<text x="108" y="185" font-size="14" text-anchor="end" fill="#222222" font-weight="bold">Round 3</text>
+<rect x="120" y="166" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="170" y="166" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="220" y="166" width="46" height="28" rx="4" fill="#E07B39" stroke="#E07B39" stroke-width="1.2"/>
+<text x="243" y="185" font-size="13" text-anchor="middle" fill="#FFFFFF" font-weight="bold">exam</text>
+<rect x="270" y="166" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="320" y="166" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="370" y="166" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="420" y="166" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="470" y="166" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="520" y="166" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="570" y="166" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<line x1="624" y1="180" x2="654" y2="180" stroke="#8A8F98" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="662" y="185" font-size="14" text-anchor="start" fill="#222222">score 3</text>
+<text x="108" y="219" font-size="14" text-anchor="end" fill="#222222" font-weight="bold">Round 4</text>
+<rect x="120" y="200" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="170" y="200" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="220" y="200" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="270" y="200" width="46" height="28" rx="4" fill="#E07B39" stroke="#E07B39" stroke-width="1.2"/>
+<text x="293" y="219" font-size="13" text-anchor="middle" fill="#FFFFFF" font-weight="bold">exam</text>
+<rect x="320" y="200" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="370" y="200" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="420" y="200" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="470" y="200" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="520" y="200" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="570" y="200" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<line x1="624" y1="214" x2="654" y2="214" stroke="#8A8F98" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="662" y="219" font-size="14" text-anchor="start" fill="#222222">score 4</text>
+<text x="108" y="253" font-size="14" text-anchor="end" fill="#222222" font-weight="bold">Round 5</text>
+<rect x="120" y="234" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="170" y="234" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="220" y="234" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="270" y="234" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="320" y="234" width="46" height="28" rx="4" fill="#E07B39" stroke="#E07B39" stroke-width="1.2"/>
+<text x="343" y="253" font-size="13" text-anchor="middle" fill="#FFFFFF" font-weight="bold">exam</text>
+<rect x="370" y="234" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="420" y="234" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="470" y="234" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="520" y="234" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="570" y="234" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<line x1="624" y1="248" x2="654" y2="248" stroke="#8A8F98" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="662" y="253" font-size="14" text-anchor="start" fill="#222222">score 5</text>
+<text x="108" y="287" font-size="14" text-anchor="end" fill="#222222" font-weight="bold">Round 6</text>
+<rect x="120" y="268" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="170" y="268" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="220" y="268" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="270" y="268" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="320" y="268" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="370" y="268" width="46" height="28" rx="4" fill="#E07B39" stroke="#E07B39" stroke-width="1.2"/>
+<text x="393" y="287" font-size="13" text-anchor="middle" fill="#FFFFFF" font-weight="bold">exam</text>
+<rect x="420" y="268" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="470" y="268" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="520" y="268" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="570" y="268" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<line x1="624" y1="282" x2="654" y2="282" stroke="#8A8F98" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="662" y="287" font-size="14" text-anchor="start" fill="#222222">score 6</text>
+<text x="108" y="321" font-size="14" text-anchor="end" fill="#222222" font-weight="bold">Round 7</text>
+<rect x="120" y="302" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="170" y="302" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="220" y="302" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="270" y="302" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="320" y="302" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="370" y="302" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="420" y="302" width="46" height="28" rx="4" fill="#E07B39" stroke="#E07B39" stroke-width="1.2"/>
+<text x="443" y="321" font-size="13" text-anchor="middle" fill="#FFFFFF" font-weight="bold">exam</text>
+<rect x="470" y="302" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="520" y="302" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="570" y="302" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<line x1="624" y1="316" x2="654" y2="316" stroke="#8A8F98" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="662" y="321" font-size="14" text-anchor="start" fill="#222222">score 7</text>
+<text x="108" y="355" font-size="14" text-anchor="end" fill="#222222" font-weight="bold">Round 8</text>
+<rect x="120" y="336" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="170" y="336" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="220" y="336" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="270" y="336" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="320" y="336" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="370" y="336" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="420" y="336" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="470" y="336" width="46" height="28" rx="4" fill="#E07B39" stroke="#E07B39" stroke-width="1.2"/>
+<text x="493" y="355" font-size="13" text-anchor="middle" fill="#FFFFFF" font-weight="bold">exam</text>
+<rect x="520" y="336" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="570" y="336" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<line x1="624" y1="350" x2="654" y2="350" stroke="#8A8F98" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="662" y="355" font-size="14" text-anchor="start" fill="#222222">score 8</text>
+<text x="108" y="389" font-size="14" text-anchor="end" fill="#222222" font-weight="bold">Round 9</text>
+<rect x="120" y="370" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="170" y="370" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="220" y="370" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="270" y="370" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="320" y="370" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="370" y="370" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="420" y="370" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="470" y="370" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="520" y="370" width="46" height="28" rx="4" fill="#E07B39" stroke="#E07B39" stroke-width="1.2"/>
+<text x="543" y="389" font-size="13" text-anchor="middle" fill="#FFFFFF" font-weight="bold">exam</text>
+<rect x="570" y="370" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<line x1="624" y1="384" x2="654" y2="384" stroke="#8A8F98" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="662" y="389" font-size="14" text-anchor="start" fill="#222222">score 9</text>
+<text x="108" y="423" font-size="14" text-anchor="end" fill="#222222" font-weight="bold">Round 10</text>
+<rect x="120" y="404" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="170" y="404" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="220" y="404" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="270" y="404" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="320" y="404" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="370" y="404" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="420" y="404" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="470" y="404" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="520" y="404" width="46" height="28" rx="4" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<rect x="570" y="404" width="46" height="28" rx="4" fill="#E07B39" stroke="#E07B39" stroke-width="1.2"/>
+<text x="593" y="423" font-size="13" text-anchor="middle" fill="#FFFFFF" font-weight="bold">exam</text>
+<line x1="624" y1="418" x2="654" y2="418" stroke="#8A8F98" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="662" y="423" font-size="14" text-anchor="start" fill="#222222">score 10</text>
+<rect x="120" y="447" width="18" height="16" rx="3" fill="#DCE8F6" stroke="#2E6FBA" stroke-width="1.2"/>
+<text x="146" y="460" font-size="14" text-anchor="start" fill="#222222">study: 9 folds (270 people)</text>
+<rect x="380" y="447" width="18" height="16" rx="3" fill="#E07B39" stroke="#E07B39" stroke-width="1.2"/>
+<text x="406" y="460" font-size="14" text-anchor="start" fill="#222222">exam: 1 fold (30 people)</text>
+<rect x="120" y="474" width="560" height="40" rx="8" fill="#DDF0E3" stroke="#3A9A5B" stroke-width="1.8"/>
+<text x="400" y="500" font-size="15" text-anchor="middle" fill="#3A9A5B" font-weight="bold">Average of the 10 scores: 90.33%   ·   spread (std): 6.57%</text>
+</svg>
