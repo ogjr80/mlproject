@@ -9,6 +9,7 @@ Every Python notebook is explained step by step in plain English, so you can lea
 - **[Interactive study guide](docs/index.html)**: quizzes, experiments and a progress tracker for every topic (open the file in a browser, or deploy the `docs/` folder to any static host).
 - **In each notebook**: a "Before you start" note at the top, an explanation under every step, diagrams for the harder ideas, and "Common mistakes", "Try this yourself" and "Check your understanding" sections at the end.
 - **R scripts**: commented in plain English too, step by step.
+- **New capstone: [Graph Transformer for payments fraud](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2050%20-%20Graph%20Transformer/Python/README.md)**: catch fraud rings and money mules in a synthetic 2-million-payment mobile-money network, with a graph transformer built in plain PyTorch.
 
 ![MindMap](https://github.com/0x11c11e/machine-learning/blob/main/Cheatsheet/MachineLearningAlgorithms.jpg)
 

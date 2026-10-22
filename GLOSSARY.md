@@ -4,7 +4,7 @@ Plain-English meanings of the words used in this course's notebooks, grouped by 
 
 **How to use it:** when a notebook uses a word you don't know, look it up here. Each entry ends with a link to the notebook where the word first comes up. Read that part of the notebook to see the idea in action.
 
-**Jump to:** [Data & preparation](#data--preparation) · [Training & testing](#training--testing) · [Regression](#regression) · [Classification](#classification) · [Measuring results](#measuring-results) · [Clustering](#clustering) · [Association rules](#association-rules) · [Reinforcement learning](#reinforcement-learning) · [Text (NLP)](#text-nlp) · [Neural networks](#neural-networks) · [Dimensionality reduction](#dimensionality-reduction) · [Tuning & boosting](#tuning--boosting) · [Tools & libraries](#tools--libraries)
+**Jump to:** [Data & preparation](#data--preparation) · [Training & testing](#training--testing) · [Regression](#regression) · [Classification](#classification) · [Measuring results](#measuring-results) · [Clustering](#clustering) · [Association rules](#association-rules) · [Reinforcement learning](#reinforcement-learning) · [Text (NLP)](#text-nlp) · [Neural networks](#neural-networks) · [Dimensionality reduction](#dimensionality-reduction) · [Tuning & boosting](#tuning--boosting) · [Graphs & fraud detection](#graphs--fraud-detection) · [Tools & libraries](#tools--libraries)
 
 ---
 
@@ -349,6 +349,36 @@ Plain-English meanings of the words used in this course's notebooks, grouped by 
 **n_jobs = -1** — Tells scikit-learn to use all your computer's processor cores, so the many training runs in grid search finish faster. See: [grid_search](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2048%20-%20Model%20Selection/Python/grid_search.ipynb)
 
 **XGBoost** — "eXtreme Gradient Boosting", a fast and popular gradient-boosting library that often wins competitions on table-shaped data. It needs no feature scaling. See: [xg_boost](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2049%20-%20XGBoost/Python/xg_boost.ipynb)
+
+## Graphs & fraud detection
+
+**Attention (in a graph)** — Each account gives every contact a weight that says how much to listen to it; the weights add up to 1. The model learns these weights, so it can focus on the suspicious contacts and ignore the ordinary ones. *Example:* a caught mule paid most attention to the taken-over accounts sending it money. See: [graph_transformer](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2050%20-%20Graph%20Transformer/Python/graph_transformer.ipynb)
+
+**Edge** — A connection between two nodes. *Example:* a payment from one account to another; here all payments between the same two accounts are combined into one edge with their count and total amount. See: [graph_transformer](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2050%20-%20Graph%20Transformer/Python/graph_transformer.ipynb)
+
+**Edge features** — Numbers attached to each connection, such as how many payments and how much money went along it. The graph transformer uses them when deciding how much attention to pay. See: [graph_transformer](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2050%20-%20Graph%20Transformer/Python/graph_transformer.ipynb)
+
+**Embedding** — A short list of numbers the model learns to describe each account, so that similar accounts get similar lists. Plotting them (with t-SNE) shows whether fraud accounts end up grouped together. See: [graph_transformer](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2050%20-%20Graph%20Transformer/Python/graph_transformer.ipynb)
+
+**Fraud ring** — A small group of accounts, often new and sharing phones, that work together and pass money among themselves. See: [graph_transformer](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2050%20-%20Graph%20Transformer/Python/graph_transformer.ipynb)
+
+**Graph** — A set of things (nodes) and the connections between them (edges). *Example:* accounts as nodes and payments as edges. See: [graph_transformer](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2050%20-%20Graph%20Transformer/Python/graph_transformer.ipynb)
+
+**Graph transformer** — A neural network that works on a graph: in each layer, every node collects information from its neighbours using attention, so it learns from its own data *and* from who it is connected to. See: [graph_transformer](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2050%20-%20Graph%20Transformer/Python/graph_transformer.ipynb)
+
+**Message passing** — The basic step of graph neural networks: each node gathers information from its neighbours and updates its own description. Two layers let information travel two steps through the network. See: [graph_transformer](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2050%20-%20Graph%20Transformer/Python/graph_transformer.ipynb)
+
+**Money mule** — An account used to receive stolen money and move it on quickly, for example by cashing out at an agent, so the real criminals are harder to trace. See: [graph_transformer](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2050%20-%20Graph%20Transformer/Python/graph_transformer.ipynb)
+
+**Node** — One thing in a graph. *Example:* one account. See: [graph_transformer](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2050%20-%20Graph%20Transformer/Python/graph_transformer.ipynb)
+
+**PR-AUC** — Area under the precision–recall curve: how well a model ranks the real positives at the top of its list. 1.0 is perfect; random guessing scores about the share of positives (here 0.015). The best single score when the thing you're looking for is rare. See: [graph_transformer](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2050%20-%20Graph%20Transformer/Python/graph_transformer.ipynb)
+
+**Precision** — Of the accounts the model flags, the share that really are fraud. Low precision means many honest customers get blocked. See: [graph_transformer](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2050%20-%20Graph%20Transformer/Python/graph_transformer.ipynb)
+
+**Recall** — Of all the real fraud accounts, the share the model catches. Low recall means fraud slips through. See: [graph_transformer](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2050%20-%20Graph%20Transformer/Python/graph_transformer.ipynb)
+
+**Structural encoding** — Extra numbers that tell the model *where* a node sits in the graph, such as how many contacts it has, because attention on its own can't count neighbours. See: [graph_transformer](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2050%20-%20Graph%20Transformer/Python/graph_transformer.ipynb)
 
 ## Tools & libraries
 

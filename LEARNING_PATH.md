@@ -1,6 +1,6 @@
 # Learning Path
 
-A step-by-step route through the 30 Python notebooks in this repo, from cleaning data to boosting, with a map of how the topics fit together and side-by-side results so you can compare the models.
+A step-by-step route through the 31 Python notebooks in this repo, from cleaning data to boosting, with a map of how the topics fit together and side-by-side results so you can compare the models.
 
 ---
 
@@ -209,6 +209,9 @@ All three use the Wine data (178 wines, 13 measurements, 3 customer segments) wi
 30. **[xg_boost](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2049%20-%20XGBoost/Python/xg_boost.ipynb)**, R: [xg_boost.R](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2049%20-%20XGBoost/R/xg_boost.R)
     - *What you'll learn:* gradient boosting, where each new tree fixes the previous trees' mistakes, used to tell benign from malignant tumours.
     - *When you'd use it:* when you want top accuracy on table-shaped data. It is often the winning model in competitions.
+31. **[graph_transformer](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2050%20-%20Graph%20Transformer/Python/graph_transformer.ipynb)** (no R version; see the [section README](Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2050%20-%20Graph%20Transformer/Python/README.md))
+    - *What you'll learn:* turning 2 million payments into a graph, and training a transformer that lets each account "listen" to its contacts, to catch fraud rings, money mules, launderers and taken-over accounts in a mobile-payments network.
+    - *When you'd use it:* when the answer depends on **connections** (who pays whom, who knows whom), as in fraud, anti-money-laundering and recommendations. A capstone: read the neural network and XGBoost notebooks first.
 
 ---
 
@@ -284,6 +287,20 @@ Both notebooks group the same 200 mall shoppers by annual income and spending sc
 | Result | Settles on **Ad 5**: shown **6,323 times**, with **2,178 total clicks**.* | Settles on **Ad 5**, which clearly dominates the histogram. The total clicks aren't printed: **run it to see**. The notebook notes it often earns more total clicks than UCB. |
 
 \* The UCB notebook only saves the histogram. These two numbers come from re-running its (deterministic) code on `Ads_CTR_Optimisation.csv`, and they match the figures in its explanation cells.
+
+### F. Fraud detection on the payments network (Graph Transformer)
+
+200,000 accounts and 1,954,633 payments; tested on 40,000 accounts, of which 611 (1.5%) are fraud.
+
+| | Logistic regression | XGBoost | Graph transformer |
+|---|---|---|---|
+| Looks at | each account on its own | each account on its own | each account **and its contacts** |
+| PR-AUC (1.0 = perfect, random ≈ 0.015) | 0.439 | 0.731 | **0.918** |
+| Precision / recall | 0.419 / 0.535 | 0.699 / 0.651 | **0.862 / 0.858** |
+| Fraudsters caught when reviewing the riskiest 400 accounts | 197 | 323 | **380** |
+| Honest customers bothered in those 400 | 203 | 77 | **20** |
+
+**What this tells you:** each fraud account's own numbers look fairly normal, so models that judge one account at a time miss a lot. The graph transformer also sees *who an account pays and who pays it*, which is where fraud actually shows. And because fraud is rare, accuracy is useless here (calling nobody a fraudster scores 98.5%), so the table uses PR-AUC, precision and recall instead.
 
 ---
 

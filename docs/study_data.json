@@ -1447,5 +1447,57 @@
     "a": "Recent versions of XGBoost would stop with an error at `classifier.fit`, complaining that the class labels are not 0 and 1. The encoder simply renames 2 → 0 and 4 → 1 so XGBoost accepts them."
    }
   ]
+ },
+ {
+  "id": "graph_transformer",
+  "title": "Graph Transformer",
+  "part": "Model Selection _ Boosting",
+  "partNo": "Part 10",
+  "section": "Section 50 - Graph Transformer",
+  "url": "https://github.com/ogjr80/mlproject/blob/main/Part%2010%20-%20Model%20Selection%20_%20Boosting/Section%2050%20-%20Graph%20Transformer/Python/graph_transformer.ipynb",
+  "summary": "A graph transformer turns accounts and payments into a network and lets each account learn which of its contacts to listen to, so it can spot fraud that only shows in relationships, such as mules, rings and laundering loops.",
+  "whenToUse": "Reach for it when the thing you predict depends on connections between records (payments, social links, supply chains, molecules) and a table-only model like XGBoost plateaus; the limitation is that it is slower to train, harder to explain and needs care to scale to millions of nodes.",
+  "readFirst": "**artificial_neural_network** (layers, weights, epochs and loss, which the graph transformer builds on) and **xg_boost** (the strongest table-only model, used here as the baseline to beat).",
+  "terms": [
+   "graph",
+   "node",
+   "edge",
+   "message passing",
+   "attention",
+   "graph transformer",
+   "embedding",
+   "PR-AUC",
+   "money mule"
+  ],
+  "mistakes": [
+   "**Judging a fraud model by accuracy.** With 1.5% fraud, a model that flags nobody is 98.5% accurate and useless. Look at precision, recall and above all PR-AUC, as this notebook does.",
+   "**Letting the answer leak into the inputs.** The `is_suspicious` column on transactions comes from the same ground truth as `is_fraud`. Using it to build features or edges would give near-perfect, fake results. This notebook only uses it for illustration charts and the money estimate, never as model input.",
+   "**Tuning on the test set.** The training loop picks the best epoch and the decision threshold using the *validation* accounts. If you peek at the test score while changing settings, the final number stops being an honest estimate.",
+   "**Giving fraud the full class weight.** Setting `pos_weight` to the whole imbalance (about 65) sounds fair, but it pushes the model to flag far too many honest customers. A softer weight (here the square root, about 8) usually gives a better precision/recall balance."
+  ],
+  "tryThis": [
+   "In the model cell, change `layers=2` to `layers=1` in `GraphTransformer(...)` (and rerun from there). What to notice: with one layer each account only hears from its direct contacts, not their contacts. Compare the PR-AUC and the per-fraud-type chart, especially for mules, whose giveaway (the collector fed by other mules) is two hops away.",
+   "In the graph-building cell, change `K = 15` to `K = 5`, then to `K = 40`. What to notice: how the number of edges, the epoch time and the test PR-AUC change. Fewer contacts is faster but can drop useful ones.",
+   "Remove the structural encoding: in the structural-encoding cell, change `np.c_[X_scaled, structure_scaled]` to just `X_scaled` in the `X_graph = ...` line. What to notice: whether fraud rings and launderers (the tight loops the random walkers detect) get harder to catch.",
+   "Give XGBoost a taste of the graph: after the structural-encoding cell, add `xgb.fit(np.c_[X, structure][train_idx], y[train_idx])` and print `average_precision_score(y[test_idx], xgb.predict_proba(np.c_[X, structure])[test_idx, 1])`. What to notice: how much of the gap a few simple network numbers close, and how much is left that only learning from neighbours provides."
+  ],
+  "quiz": [
+   {
+    "q": "In this notebook, what are the nodes and what are the edges of the graph?",
+    "a": "Each **account** (customer, merchant or agent) is a node. Each **pair of accounts that paid each other** is an edge, described by the number of payments, total amount, night share and channel mix. Accounts on the same phone are also linked, and every account has a self-loop."
+   },
+   {
+    "q": "What does \"attention\" mean for one account in a graph transformer?",
+    "a": "The account scores each of its contacts (how relevant is this contact?), turns the scores into weights that add up to 1, and builds its new summary mostly from the high-weight contacts. In plain words, each account decides which of its contacts to listen to most. Unlike a plain average, a single suspicious contact among thousands of honest ones can still get a lot of weight."
+   },
+   {
+    "q": "Why do logistic regression and XGBoost miss many mules even though XGBoost is a strong model?",
+    "a": "They only see each account's own numbers, and a mule's own numbers (a few incoming transfers, some cash-outs) look like an ordinary small trader's. What gives a mule away is *who* it deals with: scam victims in, a collector that other new accounts also feed, quick cash-outs. Only a model that reads the network can see that."
+   },
+   {
+    "q": "The fraud team can review 1% of accounts. Why is PR-AUC (or the top-1% capture) a better guide than ROC-AUC for choosing a model?",
+    "a": "With so few fraud accounts, ROC-AUC is dominated by how the model ranks the huge mass of honest accounts, so even weak models score close to 1. PR-AUC and the top-k capture ask the question the team actually faces: among the accounts we flag, how many are really fraud, and how much fraud do we catch for a given review effort?"
+   }
+  ]
  }
 ]

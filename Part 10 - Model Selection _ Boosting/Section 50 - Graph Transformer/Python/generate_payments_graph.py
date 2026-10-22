@@ -6,7 +6,7 @@ used. Everything is drawn from random distributions with a fixed seed, so the
 same command always produces the same files.
 
 Usage (from this folder):
-    python generate_payments_graph.py                  # default size (~1.6M transactions)
+    python generate_payments_graph.py                  # default size: 200,000 accounts, ~2M transactions
     python generate_payments_graph.py --accounts 1000000   # a much bigger network
 
 Outputs (next to this script unless --out is given):
@@ -51,7 +51,7 @@ def lognormal(rng, median, sigma, size):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument('--accounts', type=int, default=150_000, help='number of accounts (nodes)')
+    ap.add_argument('--accounts', type=int, default=200_000, help='number of accounts (nodes)')
     ap.add_argument('--tx-per-account', type=float, default=9.5, help='average everyday transactions per account')
     ap.add_argument('--seed', type=int, default=42)
     ap.add_argument('--out', default=os.path.dirname(os.path.abspath(__file__)))
