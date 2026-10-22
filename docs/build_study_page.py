@@ -1,4 +1,4 @@
-"""Build docs/study.html (the interactive study page) from docs/study_data.json.
+"""Build docs/index.html (the interactive study page) from docs/study_data.json.
 
 Usage:
     python docs/build_study_page.py                      # rebuild the page from study_data.json
@@ -13,7 +13,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, 'study_data.json')
-OUT = os.path.join(HERE, 'study.html')
+OUT = os.path.join(HERE, 'index.html')
 REPO_URL = 'https://github.com/ogjr80/mlproject/blob/main/'
 
 ORDER = ['data_preprocessing_tools', 'data_preprocessing_template', 'simple_linear_regression',
@@ -56,7 +56,7 @@ def build():
     payload = json.dumps(data, ensure_ascii=False).replace('</', '<\\/')
     with open(OUT, 'w', encoding='utf-8', newline='\n') as fh:
         fh.write(template.replace('/*__DATA__*/[]', payload))
-    print(f'study.html: {len(data)} notebooks, {os.path.getsize(OUT) // 1024} KB')
+    print(f'index.html: {len(data)} notebooks, {os.path.getsize(OUT) // 1024} KB')
 
 
 if __name__ == '__main__':

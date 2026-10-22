@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<title>One graph-transformer layer</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#555555"/></marker></defs>
+<rect x="1" y="1" width="958" height="558" rx="12" fill="#FFFFFF" stroke="#D0D4DA" stroke-width="1.5"/>
+<text x="24" y="38" font-size="21" text-anchor="start" fill="#222222" font-weight="bold">One graph-transformer layer: each account decides which contacts to listen to</text>
+
+<!-- panel 1: the neighbourhood -->
+<rect x="24" y="60" width="330" height="400" rx="10" fill="#F7F8FA" stroke="#D0D4DA" stroke-width="1"/>
+<text x="40" y="86" font-size="15" text-anchor="start" fill="#222222" font-weight="bold">1. Account A and its contacts</text>
+<text x="40" y="106" font-size="13" text-anchor="start" fill="#555555">line thickness = attention weight</text>
+<!-- edges: width ~ weight -->
+<line x1="190" y1="265" x2="88" y2="160" stroke="#2E6FBA" stroke-width="3" stroke-opacity="0.8"/>
+<line x1="190" y1="265" x2="292" y2="160" stroke="#2E6FBA" stroke-width="7" stroke-opacity="0.8"/>
+<line x1="190" y1="265" x2="292" y2="385" stroke="#2E6FBA" stroke-width="12" stroke-opacity="0.8"/>
+<line x1="190" y1="265" x2="88" y2="385" stroke="#2E6FBA" stroke-width="3" stroke-opacity="0.8"/>
+<text x="126" y="200" font-size="14" text-anchor="middle" fill="#2E6FBA" font-weight="bold">0.10</text>
+<text x="226" y="196" font-size="14" text-anchor="middle" fill="#2E6FBA" font-weight="bold">0.30</text>
+<text x="268" y="312" font-size="14" text-anchor="middle" fill="#2E6FBA" font-weight="bold">0.50</text>
+<text x="118" y="330" font-size="14" text-anchor="middle" fill="#2E6FBA" font-weight="bold">0.10</text>
+<!-- nodes -->
+<circle cx="88" cy="160" r="20" fill="#EEF0F3" stroke="#8A8F98" stroke-width="2"/>
+<text x="88" y="165" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">B</text>
+<text x="88" y="136" font-size="13" text-anchor="middle" fill="#555555">sent A 3,000</text>
+<circle cx="292" cy="160" r="20" fill="#DDF0E3" stroke="#3A9A5B" stroke-width="2"/>
+<text x="292" y="165" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">C</text>
+<text x="292" y="136" font-size="13" text-anchor="middle" fill="#555555">cash-out agent</text>
+<circle cx="292" cy="385" r="20" fill="#F6DCD9" stroke="#C8453A" stroke-width="2"/>
+<text x="292" y="390" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">D</text>
+<text x="292" y="422" font-size="13" text-anchor="middle" fill="#555555">collects from many</text>
+<circle cx="88" cy="385" r="20" fill="#EEF0F3" stroke="#8A8F98" stroke-width="2"/>
+<text x="88" y="390" font-size="14" text-anchor="middle" fill="#222222" font-weight="bold">E</text>
+<text x="88" y="422" font-size="13" text-anchor="middle" fill="#555555">old friend</text>
+<circle cx="190" cy="265" r="28" fill="#FBE5D6" stroke="#E07B39" stroke-width="3"/>
+<text x="190" y="271" font-size="17" text-anchor="middle" fill="#222222" font-weight="bold">A</text>
+<text x="152" y="270" font-size="13" text-anchor="end" fill="#E07B39" font-weight="bold">being scored</text>
+<text x="40" y="448" font-size="13" text-anchor="start" fill="#555555">Each line also carries edge info: amount, count, channel.</text>
+
+<!-- arrow from panel to steps -->
+<line x1="358" y1="260" x2="384" y2="260" stroke="#555555" stroke-width="2" marker-end="url(#arr)"/>
+
+<!-- steps -->
+<rect x="390" y="60" width="546" height="84" rx="10" fill="#FFFFFF" stroke="#2E6FBA" stroke-width="1.5"/>
+<text x="406" y="85" font-size="15" text-anchor="start" fill="#2E6FBA" font-weight="bold">2. Score every contact (attention)</text>
+<text x="406" y="107" font-size="14" text-anchor="start" fill="#222222">A asks a question (query). Each contact shows a label (key) mixed with</text>
+<text x="406" y="127" font-size="14" text-anchor="start" fill="#222222">the payment info on its line. Good match = high score.</text>
+
+<line x1="663" y1="146" x2="663" y2="160" stroke="#555555" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="390" y="162" width="546" height="84" rx="10" fill="#FFFFFF" stroke="#E07B39" stroke-width="1.5"/>
+<text x="406" y="187" font-size="15" text-anchor="start" fill="#E07B39" font-weight="bold">3. Turn scores into weights (softmax)</text>
+<text x="406" y="209" font-size="14" text-anchor="start" fill="#222222">Weights are positive and add up to 1,</text>
+<text x="406" y="229" font-size="14" text-anchor="start" fill="#222222">so A shares out its attention.</text>
+<!-- mini bars -->
+<rect x="700" y="214" width="20" height="10" fill="#2E6FBA"/><text x="710" y="240" font-size="13" text-anchor="middle" fill="#555555">B</text>
+<rect x="740" y="194" width="20" height="30" fill="#2E6FBA"/><text x="750" y="240" font-size="13" text-anchor="middle" fill="#555555">C</text>
+<rect x="780" y="174" width="20" height="50" fill="#2E6FBA"/><text x="790" y="240" font-size="13" text-anchor="middle" fill="#555555">D</text>
+<rect x="820" y="214" width="20" height="10" fill="#2E6FBA"/><text x="830" y="240" font-size="13" text-anchor="middle" fill="#555555">E</text>
+<text x="862" y="214" font-size="13" text-anchor="start" fill="#555555">sum = 1</text>
+
+<line x1="663" y1="248" x2="663" y2="262" stroke="#555555" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="390" y="264" width="546" height="84" rx="10" fill="#FFFFFF" stroke="#3A9A5B" stroke-width="1.5"/>
+<text x="406" y="289" font-size="15" text-anchor="start" fill="#3A9A5B" font-weight="bold">4. Combine the messages</text>
+<text x="406" y="311" font-size="14" text-anchor="start" fill="#222222">New info = 0.10 × B + 0.30 × C + 0.50 × D + 0.10 × E. Add A's old summary</text>
+<text x="406" y="331" font-size="14" text-anchor="start" fill="#222222">back on top (residual) and tidy the numbers (LayerNorm).</text>
+
+<line x1="663" y1="350" x2="663" y2="364" stroke="#555555" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="390" y="366" width="546" height="94" rx="10" fill="#FFFFFF" stroke="#8A8F98" stroke-width="1.5"/>
+<text x="406" y="391" font-size="15" text-anchor="start" fill="#222222" font-weight="bold">5. Feed-forward</text>
+<text x="406" y="413" font-size="14" text-anchor="start" fill="#222222">A small neural network refines the result (again with residual + LayerNorm).</text>
+<text x="406" y="433" font-size="14" text-anchor="start" fill="#222222">Output: A's new summary, 64 numbers that now describe A</text>
+<text x="406" y="451" font-size="14" text-anchor="start" fill="#222222">and the contacts it listened to.</text>
+
+<!-- footer -->
+<line x1="24" y1="482" x2="936" y2="482" stroke="#D0D4DA" stroke-width="1"/>
+<text x="24" y="508" font-size="14" text-anchor="start" fill="#222222"><tspan font-weight="bold">Every account does this at the same time.</tspan> Stack 2 layers and A hears from contacts of its contacts (2 hops).</text>
+<text x="24" y="532" font-size="14" text-anchor="start" fill="#555555">4 attention heads = 4 independent listeners, each free to focus on a different clue. A final small classifier turns the summary into a fraud score.</text>
+</svg>
